@@ -1,11 +1,12 @@
 /home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/to_the_moon
 /home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/data/icudtl.dat
 /home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so
-/home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
 /home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
 /home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
 /home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/data/flutter_assets/shaders/ink_sparkle.frag
 /home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.json
 /home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
+/home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES
+/home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
 /home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES.Z
 /home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/data/flutter_assets/version.json

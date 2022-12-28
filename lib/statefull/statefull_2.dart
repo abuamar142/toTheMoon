@@ -4,6 +4,7 @@ main() {
   runApp(const Statefull_2());
 }
 
+// ignore: camel_case_types
 class Statefull_2 extends StatefulWidget {
   const Statefull_2({super.key});
 
@@ -12,24 +13,16 @@ class Statefull_2 extends StatefulWidget {
 }
 
 class _MyAppState extends State<Statefull_2> {
-  List<Barang> barang = [
-    Barang(nama: "Buku tulis", harga: 3000, deskripsi: "Tempat untuk menulis"),
-    Barang(nama: "Buku tulis", harga: 3000, deskripsi: "Tempat untuk menulis"),
-    Barang(nama: "Buku tulis", harga: 3000, deskripsi: "Tempat untuk menulis"),
-  ];
+  List<Benda> dataBenda = [];
 
-  void tambahBarang({
+  void tambahBenda({
     required String nama,
     required String harga,
     required String deskripsi,
   }) {
-    final barangBaru = Barang(
-      nama: nama,
-      harga: int.parse(harga),
-      deskripsi: deskripsi,
-    );
+    final bendaBaru = Benda(nama, int.parse(harga), deskripsi);
     setState(() {
-      barang.add(barangBaru);
+      dataBenda.add(bendaBaru);
     });
   }
 
@@ -49,72 +42,66 @@ class _MyAppState extends State<Statefull_2> {
         body: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(10),
               child: SizedBox(
-                width: 300,
                 height: 380,
                 child: ListView.builder(
+                  itemCount: dataBenda.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return Card(
-                      child: Column(
-                        children: [
-                          Text('Nama = ${barang[index].nama}'),
-                          Text('Harga = ${barang[index].harga.toString()}'),
-                          Text('Deskripsi = ${barang[index].deskripsi}'),
-                        ],
-                      ),
+                    Benda benda = dataBenda[index];
+                    return ListTile(
+                      title: Text(benda.nama),
+                      trailing: Text(benda.harga.toString()),
+                      subtitle: Text(benda.deskripsi),
                     );
                   },
-                  itemCount: barang.length,
                 ),
               ),
             ),
-            Center(
-              child: SizedBox(
-                width: 300,
-                child: Column(
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Text(
+            Padding(
+              padding: const EdgeInsets.only(right: 10, left: 10),
+              child: Center(
+                child: SizedBox(
+                  height: 250,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
                         'Masukkan data barang',
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),
+                            fontWeight: FontWeight.bold, fontSize: 15),
                       ),
-                    ),
-                    TextField(
-                      controller: nama,
-                    ),
-                    TextField(
-                      controller: harga,
-                    ),
-                    TextField(
-                      controller: deskripsi,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: MaterialButton(
+                      Column(
+                        children: [
+                          TextField(
+                              controller: nama, textAlign: TextAlign.center),
+                          TextField(
+                              controller: harga, textAlign: TextAlign.center),
+                          TextField(
+                              controller: deskripsi,
+                              textAlign: TextAlign.center),
+                        ],
+                      ),
+                      TextButton(
+                        style: const ButtonStyle(
+                            backgroundColor:
+                                MaterialStatePropertyAll(Colors.blue),
+                            padding: MaterialStatePropertyAll(EdgeInsets.only(
+                                left: 100, right: 100, top: 18, bottom: 18))),
                         onPressed: () {
-                          tambahBarang(
+                          tambahBenda(
                             nama: nama.text,
                             harga: harga.text,
                             deskripsi: deskripsi.text,
                           );
                         },
-                        height: 40,
-                        minWidth: 150,
-                        color: Colors.blue,
                         child: const Text(
                           "Tambah",
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
+                          style: TextStyle(color: Colors.white),
                         ),
                       ),
-                    )
-                  ],
+                    ],
+                  ),
                 ),
               ),
             )
@@ -125,10 +112,10 @@ class _MyAppState extends State<Statefull_2> {
   }
 }
 
-class Barang {
+class Benda {
   String nama;
   int harga;
   String deskripsi;
 
-  Barang({required this.nama, required this.harga, required this.deskripsi});
+  Benda(this.nama, this.harga, this.deskripsi);
 }

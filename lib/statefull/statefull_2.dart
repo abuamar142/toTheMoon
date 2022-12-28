@@ -48,42 +48,78 @@ class _MyAppState extends State<Statefull_2> {
         ),
         body: Column(
           children: [
-            SizedBox(
-              width: 400,
-              height: 500,
-              child: ListView.builder(
-                itemBuilder: (BuildContext context, int index) {
-                  return Card(
-                    child: Column(
-                      children: [
-                        Text('Nama = ${barang[index].nama}'),
-                        Text('Harga = ${barang[index].harga.toString()}'),
-                        Text('Deskripsi = ${barang[index].deskripsi}'),
-                      ],
-                    ),
-                  );
-                },
-                itemCount: barang.length,
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: SizedBox(
+                width: 300,
+                height: 380,
+                child: ListView.builder(
+                  itemBuilder: (BuildContext context, int index) {
+                    return Card(
+                      child: Column(
+                        children: [
+                          Text('Nama = ${barang[index].nama}'),
+                          Text('Harga = ${barang[index].harga.toString()}'),
+                          Text('Deskripsi = ${barang[index].deskripsi}'),
+                        ],
+                      ),
+                    );
+                  },
+                  itemCount: barang.length,
+                ),
               ),
             ),
-            TextField(
-              controller: nama,
-            ),
-            TextField(
-              controller: harga,
-            ),
-            TextField(
-              controller: deskripsi,
+            Center(
+              child: SizedBox(
+                width: 300,
+                child: Column(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'Masukkan data barang',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                    TextField(
+                      controller: nama,
+                    ),
+                    TextField(
+                      controller: harga,
+                    ),
+                    TextField(
+                      controller: deskripsi,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: MaterialButton(
+                        onPressed: () {
+                          tambahBarang(
+                            nama: nama.text,
+                            harga: harga.text,
+                            deskripsi: deskripsi.text,
+                          );
+                        },
+                        height: 40,
+                        minWidth: 150,
+                        color: Colors.blue,
+                        child: const Text(
+                          "Tambah",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
             )
           ],
         ),
-        floatingActionButton: FloatingActionButton(onPressed: () {
-          tambahBarang(
-            nama: nama.text,
-            harga: harga.text,
-            deskripsi: deskripsi.text,
-          );
-        }),
       ),
     );
   }

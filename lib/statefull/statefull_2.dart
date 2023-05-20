@@ -36,7 +36,7 @@ class _MyAppState extends State<Statefull_2> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('List object'),
+          title: const Text('Data Benda'),
           centerTitle: true,
         ),
         body: Column(
@@ -67,7 +67,7 @@ class _MyAppState extends State<Statefull_2> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text(
-                        'Masukkan data barang',
+                        'Masukkan data benda',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 15),
                       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class Layout_2 extends StatelessWidget {
   const Layout_2({super.key});
 

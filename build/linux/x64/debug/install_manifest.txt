@@ -10,3 +10,4 @@
 /home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
 /home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES.Z
 /home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/data/flutter_assets/version.json
+/home/abuamar142/Kuliah/tambahan/flutterGass/to_the_moon/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.smcbin

@@ -1,0 +1,4 @@
+coba belajar getx di https://medium.com/mindful-engineering/lets-getx-in-flutter-4eaff2826ac7
+baca bagian state management dulu
+
+ini fungsi-nya sama kaya statefull widget
